@@ -19,7 +19,20 @@
 
 ---
 
+### 🌐 Live Platform Access & Services
+
+| Service Component | Direct Access Link | Port | Purpose |
+|---|---|---|---|
+| 🖥️ **Frontend Control Room** | [**`http://127.0.0.1:5173`**](http://127.0.0.1:5173) | `5173` | Interactive Cyber Privacy Enclave OS Dashboard |
+| ⚙️ **Backend REST API** | [**`http://127.0.0.1:8000`**](http://127.0.0.1:8000) | `8000` | FastAPI Core Privacy Engine & Enclave Gateway |
+| 📖 **Interactive Swagger UI** | [**`http://127.0.0.1:8000/docs`**](http://127.0.0.1:8000/docs) | `8000` | Real-time OpenAPI interactive test bench |
+| 📑 **API Documentation (ReDoc)** | [**`http://127.0.0.1:8000/redoc`**](http://127.0.0.1:8000/redoc) | `8000` | Schema models and endpoint specifications |
+| 🛡️ **Security Posture Report** | [**`http://127.0.0.1:8000/api/security/posture`**](http://127.0.0.1:8000/api/security/posture) | `8000` | Automated 6-control security verification JSON |
+
+---
+
 ## 📑 Table of Contents
+- [Live Platform Access & Services](#-live-platform-access--services)
 - [Executive Overview](#-executive-overview)
 - [System Architecture & Data Topology](#-system-architecture--data-topology)
 - [Physical Database Isolation (6 Separate Stores)](#-physical-database-isolation-6-separate-stores)
@@ -168,7 +181,12 @@ Double-click `start.bat` in the project root:
 ```cmd
 start.bat
 ```
-This automatically initializes the FastAPI backend on `http://127.0.0.1:8000` and launches the Vite React frontend on `http://127.0.0.1:5173`.
+This automatically initializes the FastAPI backend and launches the Vite React frontend.
+
+Once started, access the platform services locally:
+- 🖥️ **Frontend Dashboard**: [**http://127.0.0.1:5173**](http://127.0.0.1:5173)
+- ⚙️ **Backend REST API**: [**http://127.0.0.1:8000**](http://127.0.0.1:8000)
+- 📖 **Interactive Swagger Docs**: [**http://127.0.0.1:8000/docs**](http://127.0.0.1:8000/docs)
 
 ### Option 2: Manual Setup
 
@@ -193,6 +211,7 @@ cp .env.example .env
 # Run FastAPI backend
 python -m uvicorn backend.main:app --host 127.0.0.1 --port 8000 --reload
 ```
+API will be live at: [**http://127.0.0.1:8000**](http://127.0.0.1:8000) (Swagger Docs: [**http://127.0.0.1:8000/docs**](http://127.0.0.1:8000/docs))
 
 #### 2. Frontend Setup
 ```bash
@@ -201,7 +220,7 @@ npm install
 npm run dev
 ```
 
-Open **`http://127.0.0.1:5173`** in your browser.
+Frontend Control Room will be live at: [**http://127.0.0.1:5173**](http://127.0.0.1:5173)
 
 ---
 
